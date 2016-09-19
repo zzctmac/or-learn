@@ -2,6 +2,7 @@ local _M = {}
 local cjson = require "cjson"
 local mysql = require "resty.mysql"
 function _M.go()
+
     local db, err = mysql:new()
     if not db then
         ngx.say("failed to instantiate mysql:", err)
